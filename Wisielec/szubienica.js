@@ -112,16 +112,14 @@ function konw()
         if (haslo.charAt(i)==" ") haslo1 = haslo1 + " ";  //Tu nie działa
         else haslo1 = haslo1 + "-";
     }
-    alert(haslo);
-    alert(haslo1);
+
 }
 
 
 function wypisz_haslo()
 {
-    document.getElementById("szubienica").innerHTML = '<img src="img/s0.jpg" alt="" />'
-    document.getElementById("plansza").style = "margin-top: 50px";
-    document.getElementById("plansza").style = "margin-bottom: 50px";
+    
+    document.getElementById("plansza").style = "margin-bottom: 65px; margin-top: 65px";
     document.getElementById("plansza").innerHTML = haslo1;
 }
  
@@ -179,7 +177,7 @@ function start()
         tresc_diva = tresc_diva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+litery.charAt(i)+'</div>';
         if ((i+1) % 7==0) tresc_diva = tresc_diva + '<div style="clear: both;"></div>'; 
     }
-
+    document.getElementById("szubienica").innerHTML = '<img src="img/s0.jpg" alt="" />';
     document.getElementById("alfabet").innerHTML = tresc_diva;
     wypisz_haslo();
     
