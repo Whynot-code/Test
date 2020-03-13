@@ -74,6 +74,7 @@ function kategorie()
 
 var haslo = "";
 
+
 function rozpocznij(wyb)
 {
  var random = Math.floor(Math.random()*5);
@@ -83,16 +84,16 @@ function rozpocznij(wyb)
   else if (wyb==2) haslo= ros[random];
   else if (wyb==3) haslo = spo[random];
   else  haslo = gry[random];
-
+  konw();
   start();
+ 
 }
 
-alert(haslo);
-  alert(haslo.length);
+
 
 haslo = haslo.toUpperCase();
 
-var dlugosc = haslo.length; 
+
 
 var haslo1 = "";
 var ile_skuch = 0;
@@ -100,12 +101,20 @@ var ile_skuch = 0;
 var yes = new Audio("yes.wav");
 var no = new Audio("no.wav");
 
-for (i=0; i<dlugosc; i++)
-{
-    if (haslo.charAt(i)==" ") haslo1 = haslo1 + " ";  //Tu nie działa
-    else haslo1 = haslo1 + "-";
-}
+window.onload = poczatek;
 
+function konw()
+{
+    var dlugosc = haslo.length; 
+
+        for (i=0; i<dlugosc; i++)
+    {
+        if (haslo.charAt(i)==" ") haslo1 = haslo1 + " ";  //Tu nie działa
+        else haslo1 = haslo1 + "-";
+    }
+    alert(haslo);
+    alert(haslo1);
+}
 
 
 function wypisz_haslo()
@@ -117,7 +126,7 @@ function wypisz_haslo()
 }
  
 
-window.onload = poczatek;
+
 
 var litey = new Array(35);
 
@@ -185,6 +194,8 @@ String.prototype.ustawZnak = function(miejsce, znak)
 function sprawdz(nr)
 {
 var trafiona = false;
+
+var dlugosc = haslo.length; 
 
     for (i=0; i<dlugosc; i++)
     {
